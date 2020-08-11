@@ -1,18 +1,29 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <HeaderComp :title="encabezado.title" :img="encabezado.imgPath"/>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import HeaderComp from '@/components/HeaderComp.vue'
 
 export default {
   name: 'Home',
   components: {
-    HelloWorld
+    HeaderComp,
+  },
+  data() {
+    return {
+      encabezado: {
+        title: 'Departamento de Meteorología Sinóptica y Aeronáutica',
+        imgPath: 'logos/IMN-LogoRedes-RGB.png',
+      }
+    }
   }
 }
 </script>
+
+<style scoped>
+
+</style>
