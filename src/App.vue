@@ -218,6 +218,7 @@ hr {
 .nav .header h1 {
   font-size: 50px;
   line-height: 50px;
+  text-align: center;
 }
 
 .content {

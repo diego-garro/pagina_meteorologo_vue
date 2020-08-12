@@ -1,7 +1,11 @@
 <template>
   <div class="header">
-    <img v-if="img" :src="getImgURL(img)" alt="Logo IMN">
+    <a v-if="img"  href="https://www.imn.ac.cr/web/imn/inicio" target="_blank">
+      <img :src="getImgURL(img)" alt="Logo IMN">
+    </a>
     <h1>{{ title }}</h1>
+    <br>
+    <h3>{{ subtitle }}</h3>
   </div>
 </template>
 
@@ -13,10 +17,11 @@ export default {
       type: String,
       required: true,
     },
-    img: String
+    subtitle: String,
+    img: String,
   },
   methods: {
-    getImgURL: (name) => require(`../assets/img/${name}`),
+    getImgURL: (url) => require(`../assets/img/${url}`),
   }
 }
 </script>
@@ -25,8 +30,8 @@ export default {
 <style scoped>
 .header {
   text-align: center;
-  font-size: 20px;
-  line-height: 40px;
+  font-size: 30px;
+  line-height: 60px;
 }
 
 /* .header img {
@@ -36,7 +41,19 @@ export default {
 @media (max-width: 768px) {
 
   .header {
+    margin-top: 35px;
+  }
+
+  .header h1 {
+    font-size: 40px;
     line-height: 40px;
+    margin: 0 10px 0 10px;
+  }
+
+  .header h3 {
+    line-height: 25px;
+    margin: 0 10px 0 10px;
+
   }
 
   .header img {
