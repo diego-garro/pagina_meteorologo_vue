@@ -100,15 +100,15 @@ export default {
 .index-header {
   display: none;
   width: 100%;
-  height: 50px;
+  height: 10vmin;
   background-color: var(--color-light-fonts);
   box-shadow: 0 0 15px rgb(49, 47, 47);
 }
 
 .index-header button {
   display: block;
-  width: 50px;
-  height: 50px;
+  width: 10vmin;
+  height: 10vmin;
   padding: 10px;
   border: none;
   border-right: 2px solid var(--color-bg);
@@ -126,8 +126,8 @@ export default {
 }
 
 .index-header button img {
-  width: 100%;
-  height: 80%;
+  width: 5vmin;
+  height: 4vmin;
 }
 
 .index-header .index-header__item {
@@ -143,13 +143,13 @@ body {
     /* background-image: radial-gradient(circle, var(--color-bg), var(--color-bg2)); */
     background-color: var(--color-bg);
     font-family: var(--fonts);
-    line-height: 18px;
+    line-height: 2vmin;
     color: var(--color-light-fonts);
 }
 
 hr {
   border: 0;
-  height: 12px;
+  height: 4vmin;
   box-shadow: inset 0 12px 12px -12px var(--color-hover);
 }
 
@@ -160,16 +160,18 @@ hr {
 
 .menu li {
     align-items: center;
-    padding: 2px;
+    padding: 0 1vmin 1vmin 1vmin;
 }
 
 .menu li a {
     color: var(--color-font-menu);
-    display: block;
-    font-size: 25px;
-    line-height: 30px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-size: 4vmin;
+    line-height: 4vmin;
     background: var(--color-light-fonts);
-    border-radius: 5px;
+    border-radius: 1vmin;
 }
 
 .menu li a:hover {
@@ -178,15 +180,12 @@ hr {
 }
 
 .menu li span {
-  display: inline-block;
-  width: 75px;
-  align-content: center;
+  width: 11vmin;
   text-align: center;
-  align-items: center;
 }
 
 .menu .icono {
-  line-height: 18px;
+  line-height: 3vmin;
 }
 
 .menu a {
@@ -216,8 +215,8 @@ hr {
 }
 
 .nav .header h1 {
-  font-size: 50px;
-  line-height: 50px;
+  font-size: 8vmin;
+  line-height: 8vmin;
   text-align: center;
 }
 
@@ -226,10 +225,41 @@ hr {
   right: 0;
 }
 
+.content div .title {
+  text-align: center;
+  font-size: 6vmin;
+  line-height: 6vmin;
+  padding: 0 1.5vmin 0 1.5vmin;
+}
+
+section {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-flow: column;
+  justify-content: center;
+  margin: 2vmin 0 0 0;
+}
+
+@media (max-width: 900px) {
+  .content {
+    width: 70%;
+  }
+
+  .nav {
+    width: 30%;
+  }
+}
+
 @media (max-width: 786px) {
   
   * {
     padding: 0;
+  }
+
+  body {
+    line-height: 4vmin;
   }
 
   .index-header {
@@ -249,13 +279,13 @@ hr {
     position: absolute;
     width: 75%;
     height: 100%;
-    top: 50px;
+    top: 11vmin;
     margin-left: -100%;
     transition: all 0.35s;
     z-index: 25;
     overflow-y: hidden;
     background: var(--color-bg);
-    border-radius: 10px;
+    border-radius: 2vmin;
     border: 2px solid var(--color-light-fonts);
     box-shadow: 0 3px 10px 0 rgb(49, 47, 47);
   }
@@ -265,27 +295,23 @@ hr {
   }
 
   .menu li {
-    padding: 0;
-  }
-
-  .menu li span {
-    width: 35px;
+    padding: 0 0.5vmin 0.2vmin 0.5vmin;
   }
 
   .menu li a {
     padding: 0;
-    margin: 5px;
-    font-size: 20px;
-    line-height: 3px;
-    padding: 3px 0 3px 10px;
-    border-radius: 5px;
+    margin: 0.8vmin 0.5vmin 0 0.5vmin;
+    font-size: 4vmin;
+    line-height: 1vmin;
+    padding: 1vmin 0 1vmin 1vmin;
+    border-radius: 1vmin;
     letter-spacing: 0;
   }
 
   .show {
     margin-left: 0;
     position: fixed;
-    overflow-y: scroll;
+    overflow-y: hidden;
     height: 65vh;
   }
 }

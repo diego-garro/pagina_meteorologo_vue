@@ -42,25 +42,24 @@ export default {
 
 <style scoped>
 .container {
-    width: 400px;
-    height: 330px;
-    border-radius: 8px;
-    box-shadow: 0 2px 2px var(--color-light-fonts);
-    overflow: hidden;
-    margin: 20px;
+    width: 40vmin;
+    height: 30vmin;
+    border-radius: 0.5vmin;
+    box-shadow: 0 0.2vmin 0.2vmin var(--color-light-fonts);
     text-align: center;
     transition: transform 0.25s;
-    letter-spacing: 1px;
+    letter-spacing: 0.1vmin;
+    margin: 0 5vmin 5vmin 0;
 }
 
 .container:hover {
-    transform: translateY(-15px);
-    box-shadow: 0 12px var(--color-box-shadow);
+    transform: translateY(-0.9vmin);
+    box-shadow: 0 1.2vmin var(--color-box-shadow);
 }
 
 .container.big-card {
-    width: 600px;
-    height: 450px;
+    width: 50vmin;
+    height: 40vmin;
 }
 
 .container img {
@@ -71,18 +70,11 @@ export default {
 }
 
 .container h2 {
-    padding: 0 1rem;
-    font-size: 20px;
+    padding: 0 1vmin;
+    font-size: 3vmin;
 }
 
 @media (max-width: 768px) {
-
-    .container,
-    .container.big-card {
-        width: 300px;
-        height: 200px;
-    }
-
     .container img {
         width: 85%;
         height: 85%;

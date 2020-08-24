@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import ImagenesSatelite from '../views/ImagenesSatelite.vue'
 
 Vue.use(VueRouter)
 
@@ -13,7 +14,7 @@ const routes = [
   {
     path: '/imagenes-satelite',
     name: 'Imágenes de Satélite',
-    component: () => import(/* webpackChunkName: "about" */ '../views/ImagenesSatelite.vue')
+    component: ImagenesSatelite
   }
 ]
 
