@@ -215,8 +215,8 @@ hr {
 }
 
 .nav .header h1 {
-  font-size: 8vmin;
-  line-height: 8vmin;
+  font-size: 6vmin;
+  line-height: 6vmin;
   text-align: center;
 }
 
@@ -229,6 +229,13 @@ hr {
   text-align: center;
   font-size: 6vmin;
   line-height: 6vmin;
+  padding: 0 1.5vmin 0 1.5vmin;
+}
+
+.content div .note {
+  text-align: center;
+  font-size: 3.5vmin;
+  line-height: 3.5vmin;
   padding: 0 1.5vmin 0 1.5vmin;
 }
 

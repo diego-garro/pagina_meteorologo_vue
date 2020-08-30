@@ -71,7 +71,7 @@ export default {
 
 .container h2 {
     padding: 0 1vmin;
-    font-size: 3vmin;
+    font-size: 2.5vmin;
 }
 
 @media (max-width: 768px) {

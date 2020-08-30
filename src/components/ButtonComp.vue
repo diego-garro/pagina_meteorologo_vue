@@ -1,5 +1,7 @@
 <template>
-    <a  class="button" :class="{'light': light}" :href="link" target="_blank">{{ title }}</a>
+    <div class="button-container">
+        <a  class="button" :class="{'light': light}" :href="link" target="_blank">{{ title }}</a>
+    </div>
 </template>
 
 <script>
@@ -23,6 +25,11 @@ export default {
 </script>
 
 <style>
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
 .button {
     color: var(--color-font-menu);
     background: var(--color-light-fonts);

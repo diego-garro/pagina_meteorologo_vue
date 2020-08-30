@@ -3,9 +3,9 @@
     <a v-if="img"  href="https://www.imn.ac.cr/web/imn/inicio" target="_blank">
       <img :src="getImgURL(img)" alt="Logo IMN">
     </a>
-    <h1>{{ title }}</h1>
+    <h1 v-if="title">{{ title }}</h1>
     <br>
-    <h3>{{ subtitle }}</h3>
+    <h3 v-if="subtitle">{{ subtitle }}</h3>
   </div>
 </template>
 
@@ -50,7 +50,7 @@ export default {
   }
 
   .header h3 {
-    line-height: 2.5vmin;
+    line-height: 5vmin;
     margin: 0 1vmin 0 1vmin;
 
   }
