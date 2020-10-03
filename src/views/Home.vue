@@ -4,15 +4,17 @@
     <section>
       <CardContainer :cards="cards.slice(0,2)"/>
     </section>
-    <hr>
-    <h1 class="title">Rayos actuales e imagen de infrarrojo (loop)</h1>
+    <br><hr>
     <section>
+      <h1 class="content-title">Rayos actuales e imagen de infrarrojo (loop)</h1>
+      <br>
       <CardContainer :cards="cards.slice(2, 9)"/>
       <ButtonContainer :buttons="buttons"/> 
     </section>
-    <hr>
-    <h1 class="title">Modelos Numéricos</h1>
+    <br><hr>
     <section>
+      <h1 class="content-title">Modelos Numéricos</h1>
+      <br>
       <CardContainer :cards="cards.slice(9)"/>
     </section>
   </div>

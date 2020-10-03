@@ -1,9 +1,9 @@
 <template>
     <div class="container" :class="{'big-card': big}">
-        <a v-if="link" :href="link" target="_blank">
-            <img :src="getImgURL(img)" alt="">
+        <a class="card-link" v-if="link" :href="link" target="_blank">
+            <img class="card-img" :src="getImgURL(img)" alt="">
         </a>
-        <h2>{{ title }}</h2>
+        <h2 class="card-title">{{ title }}</h2>
     </div>
 </template>
 
@@ -45,7 +45,7 @@ export default {
     width: 40vmin;
     height: 30vmin;
     border-radius: 0.5vmin;
-    box-shadow: 0 0.2vmin 0.2vmin var(--color-light-fonts);
+    box-shadow: 0 0.2vmin 0.2vmin var(--color-dark-blue);
     text-align: center;
     transition: transform 0.25s;
     letter-spacing: 0.1vmin;
@@ -54,7 +54,7 @@ export default {
 
 .container:hover {
     transform: translateY(-0.9vmin);
-    box-shadow: 0 1.2vmin var(--color-box-shadow);
+    box-shadow: 0 1.2vmin var(--color-dark-blue);
 }
 
 .container.big-card {
@@ -62,22 +62,22 @@ export default {
     height: 40vmin;
 }
 
-.container img {
-    width: 95%;
-    height: 95%;
+.card-img {
+    width: 85%;
+    height: 85%;
     margin-left: auto;
     margin-right: auto;
 }
 
-.container h2 {
+.card-title {
     padding: 0 1vmin;
     font-size: 2.5vmin;
 }
 
 @media (max-width: 768px) {
-    .container img {
-        width: 85%;
-        height: 85%;
+    .card-img {
+        width: 75%;
+        height: 75%;
     }
 }
 </style>

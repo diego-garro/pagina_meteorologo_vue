@@ -7,7 +7,7 @@
     </section>
     <br><hr>
     <section>
-      <h1 class="title">Las imágenes de satélite acá son las del GOES-13, GOES-16 y algunos derivados</h1>
+      <h1 class="content-title">Las imágenes de satélite acá son las del GOES-13, GOES-16 y algunos derivados</h1>
       <br>
       <ButtonContainer :buttons="buttons"/>
     </section>
@@ -17,11 +17,11 @@
     </section>
     <br><hr>
     <section>
-      <h1 class="title">Imágenes de Satélite Sinópticas</h1>
+      <h1 class="content-title">Imágenes de Satélite Sinópticas</h1>
       <br>
       <CardContainer :cards="cards.slice(3, 9)"/>
       <br>
-      <h2 class="note">Nota: Estas son las imágenes actuales para darle seguimiento al tiempo actual, si desea ver algún registro o imagen satelital más antigua debe ir al histórico</h2>
+      <h2 class="content-note">Nota: Estas son las imágenes actuales para darle seguimiento al tiempo actual, si desea ver algún registro o imagen satelital más antigua debe ir al histórico</h2>
     </section>
     <br><hr>
     <section>
@@ -171,7 +171,7 @@ export default {
 <style scoped>
 @media (max-width: 768px) {
   .img-satelite {
-    margin-top: 50px;
+    margin-top: 13vmin;
   }
 }
 </style>

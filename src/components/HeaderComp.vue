@@ -1,11 +1,11 @@
 <template>
   <div class="header">
     <a v-if="img"  href="https://www.imn.ac.cr/web/imn/inicio" target="_blank">
-      <img :src="getImgURL(img)" alt="Logo IMN">
+      <img class="header__img" :src="getImgURL(img)" alt="Logo IMN">
     </a>
-    <h1 v-if="title">{{ title }}</h1>
+    <h1 class="header__title" v-if="title">{{ title }}</h1>
     <br>
-    <h3 v-if="subtitle">{{ subtitle }}</h3>
+    <h3 class="header__subtitle" v-if="subtitle">{{ subtitle }}</h3>
   </div>
 </template>
 
@@ -30,11 +30,21 @@ export default {
 <style scoped>
 .header {
   text-align: center;
-  font-size: 4vmin;
-  line-height: 8vmin;
+  font-size: 5vmin;
+  line-height: 9vmin;
 }
 
-.header img {
+.header__title {
+  margin: 0 2vmin 0;
+  line-height: 10vmin;
+}
+
+.header__subtitle {
+  line-height: 5vmin;
+  margin: 0 1vmin 0 1vmin;
+}
+
+.header__img {
   width: 50vmin;
   height: 50vmin;
 }
@@ -45,17 +55,7 @@ export default {
     margin-top: 3.5vmin;
   }
 
-  .header h1 {
-    margin: 0 1vmin 0 1vmin;
-  }
-
-  .header h3 {
-    line-height: 5vmin;
-    margin: 0 1vmin 0 1vmin;
-
-  }
-
-  .header img {
+  .header__img {
       width: 50vmin;
       height: 50vmin;
   }

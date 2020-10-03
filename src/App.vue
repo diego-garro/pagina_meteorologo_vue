@@ -1,18 +1,18 @@
 <template>
   <div id="app">
     <header class="index-header">
-        <button @click="changeShowClass()" class="index-header__item">
-            <img src="./assets/img/logos/logo_imn_blanco.png" alt="">
+        <button @click="changeShowClass()" class="index-header__button">
+            <img class="index-header__img" src="./assets/img/logos/logo_imn_blanco.png" alt="">
         </button>
         <h4 class="index-header__item">MENÚ</h4>
     </header>
     <nav id="nav" class="nav" :class="showClass">
-      <div class="header">
-        <h1>Página Web: <span>{{ actualPage }}</span></h1>
+      <div class="principal-header">
+        <h1 class="principal-header__title">Página Web: <span>{{ actualPage }}</span></h1>
       </div>
       <ul class="menu">
-        <li v-for="(route, index) in routeProps" :key="index" @click="changeActualPage(index)">
-          <router-link :to="route.to"><span><i :class="`icono izquierda fas fa-${route.icon}`"/></span>{{ route.text }}</router-link>
+        <li class="menu__item" v-for="(route, index) in routeProps" :key="index" @click="changeActualPage(index)">
+          <router-link class="menu__link" :to="route.to"><span class="menu__span"><font-awesome-icon class="menu__icon" :icon="route.icon" size="2x"/></span>{{ route.text }}</router-link>
         </li>
       </ul>
     </nav>
@@ -57,7 +57,7 @@ export default {
         },
         {
           to: '/modelos-imn',
-          icon: 'cloud-sun-rain',
+          icon: 'cloud-showers-heavy',
           text: 'Modelos Numéricos (IMN)'
         }
       ],
@@ -79,128 +79,80 @@ export default {
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 :root {
-    --color-bg: #e9e9e9;
-    --color-bg2: #0e6b8a;
-    --color-dark-fonts: #e9e9e9;
-    --color-light-fonts: #0d2c44;
-    --color-font-menu: #e9e9e9;
-    --color-hover: #1a95d5;
-    --color-box-shadow: #084370;
-    --fonts: 'Bebas Neue', 'cursive';
+  --color-cream: #e9e9e9;
+  --color-dark-blue: #0d2c44;
+  --color-light-blue: #1a95d5;
+  --fonts: 'Bebas Neue', 'cursive';
 }
 
 * {
-    margin: 0;
-    padding: 10px;
-    box-sizing: border-box;
-    letter-spacing: 2px;
+  box-sizing: border-box;
+  letter-spacing: 0.5vmin;
+  font-family: var(--fonts);
+}
+
+body {
+  margin: 0;
+  line-height: 2vmin;
+  color: var(--color-dark-blue);
 }
 
 .index-header {
+  margin: 0;
   display: none;
   width: 100%;
-  height: 10vmin;
-  background-color: var(--color-light-fonts);
+  height: 12vmin;
+  background: var(--color-dark-blue);
   box-shadow: 0 0 15px rgb(49, 47, 47);
 }
 
-.index-header button {
-  display: block;
-  width: 10vmin;
-  height: 10vmin;
-  padding: 10px;
+.index-header__button {
+  display: inline-block;
+  width: 12vmin;
+  height: 12vmin;
+  padding: 2vmin;
   border: none;
-  border-right: 2px solid var(--color-bg);
-  color: var(--color-light-fonts);
-  background-color: var(--color-light-fonts);
+  border-right: 2px solid var(--color-cream);
+  background: var(--color-dark-blue);
 }
 
-.index-header button:focus {
+.index-header__button:focus {
   outline: none;
 }
 
-.index-header button:hover {
+.index-header__button:hover {
   cursor: pointer;
   background: rgba(0, 0, 0, 0.3);
 }
 
-.index-header button img {
-  width: 5vmin;
-  height: 4vmin;
+.index-header__img {
+  width: 7vmin;
+  height: 5vmin;
 }
 
-.index-header .index-header__item {
+.index-header__item {
   display: inline-block;
-  margin: 0 5px 0 0;
+  font-size: 5vmin;
+  margin: 0 2vmin 0 2vmin;
 }
 
-.index-header h4 {
-  color: var(--color-dark-fonts);
-}
-
-body {
-    /* background-image: radial-gradient(circle, var(--color-bg), var(--color-bg2)); */
-    background-color: var(--color-bg);
-    font-family: var(--fonts);
-    line-height: 2vmin;
-    color: var(--color-light-fonts);
+.index-header__item {
+  color: var(--color-cream);
 }
 
 hr {
   border: 0;
   height: 4vmin;
-  box-shadow: inset 0 12px 12px -12px var(--color-hover);
-}
-
-.menu {
-  top: 0;
-  list-style: none;
-}
-
-.menu li {
-    align-items: center;
-    padding: 0 1vmin 1vmin 1vmin;
-}
-
-.menu li a {
-    color: var(--color-font-menu);
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    font-size: 4vmin;
-    line-height: 4vmin;
-    background: var(--color-light-fonts);
-    border-radius: 1vmin;
-}
-
-.menu li a:hover {
-  background: var(--color-hover);
-  color: var(--color-light-fonts);
-}
-
-.menu li span {
-  width: 11vmin;
-  text-align: center;
-}
-
-.menu .icono {
-  line-height: 3vmin;
-}
-
-.menu a {
-  font-weight: bold;
-  color: var(--color-light-fonts);
-  text-decoration: none;
-}
-
-.menu li a.router-link-exact-active {
-  background: var(--color-hover);
-  color: var(--color-light-fonts);
+  box-shadow: inset 0 12px 12px -12px var(--color-light-blue);
 }
 
 .nav,
 .content {
+  background: var(--color-cream);
+  color: var(--color-dark-blue);
   display: inline-block;
   position: absolute;
   top: 0;
@@ -214,7 +166,7 @@ hr {
   position: fixed;
 }
 
-.nav .header h1 {
+.principal-header__title {
   font-size: 6vmin;
   line-height: 6vmin;
   text-align: center;
@@ -225,14 +177,14 @@ hr {
   right: 0;
 }
 
-.content div .title {
+.content-title {
   text-align: center;
   font-size: 6vmin;
   line-height: 6vmin;
   padding: 0 1.5vmin 0 1.5vmin;
 }
 
-.content div .note {
+.content-note {
   text-align: center;
   font-size: 3.5vmin;
   line-height: 3.5vmin;
@@ -249,6 +201,49 @@ section {
   margin: 2vmin 0 0 0;
 }
 
+.menu {
+  padding: 0 0 0 1vmin;
+  top: 0;
+  list-style: none;
+}
+
+.menu__item {
+  align-items: center;
+  padding: 1vmin 0 1vmin 0;
+  margin: 0 2vmin 0;
+}
+
+.menu__span {
+  width: 15vmin;
+  text-align: center;
+  font-size: 3vmin;
+}
+
+.menu__link {
+  color: var(--color-cream);
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  text-align: start;
+  font-size: 4vmin;
+  line-height: 4vmin;
+  background: var(--color-dark-blue);
+  border-radius: 1vmin;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 1vmin 0 1vmin 0;
+}
+
+.menu__link:hover {
+  background: var(--color-light-blue);
+  color: var(--color-dark-blue);
+}
+
+.menu__link.router-link-exact-active {
+  background: var(--color-light-blue);
+  color: var(--color-dark-blue);
+}
+
 @media (max-width: 900px) {
   .content {
     width: 70%;
@@ -256,15 +251,11 @@ section {
 
   .nav {
     width: 30%;
+    background: var(--color-cream);
   }
 }
 
 @media (max-width: 786px) {
-  
-  * {
-    padding: 0;
-  }
-
   body {
     line-height: 4vmin;
   }
@@ -286,31 +277,34 @@ section {
     position: absolute;
     width: 75%;
     height: 100%;
-    top: 11vmin;
+    top: 13vmin;
     margin-left: -100%;
     transition: all 0.35s;
     z-index: 25;
     overflow-y: hidden;
-    background: var(--color-bg);
+    background: var(--color-cream);
     border-radius: 2vmin;
-    border: 2px solid var(--color-light-fonts);
+    border: 2px solid var(--color-dark-blue);
     box-shadow: 0 3px 10px 0 rgb(49, 47, 47);
   }
 
-  .nav .header {
+  .principal-header__title {
     display: none;
   }
 
-  .menu li {
-    padding: 0 0.5vmin 0.2vmin 0.5vmin;
+  .menu {
+    top: 0;
   }
 
-  .menu li a {
-    padding: 0;
-    margin: 0.8vmin 0.5vmin 0 0.5vmin;
+  .menu__item {
+    padding: 0 0.5vmin 0.2vmin 0;
+  }
+
+  .menu__link {
+    margin: 0.8vmin 0.5vmin 0 0;
     font-size: 4vmin;
     line-height: 1vmin;
-    padding: 1vmin 0 1vmin 1vmin;
+    padding: 1vmin 0 1vmin 0;
     border-radius: 1vmin;
     letter-spacing: 0;
   }
