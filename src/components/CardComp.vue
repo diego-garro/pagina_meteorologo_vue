@@ -67,6 +67,7 @@ export default {
     height: 85%;
     margin-left: auto;
     margin-right: auto;
+    border-radius: 0.7vmin;
 }
 
 .card-title {

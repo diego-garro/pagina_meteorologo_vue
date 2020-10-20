@@ -3,10 +3,19 @@ import App from './App.vue'
 import router from './router'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faHome, faSatellite, faDatabase, faPooStorm, faWaveSquare } from '@fortawesome/free-solid-svg-icons'
-import { faCloudShowersHeavy } from '@fortawesome/free-solid-svg-icons'
+import { faCloudShowersHeavy, faGlobeAmericas, faTemperatureLow } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
-library.add(faHome, faSatellite, faDatabase, faPooStorm, faWaveSquare, faCloudShowersHeavy)
+library.add(
+  faHome,
+  faSatellite,
+  faDatabase,
+  faPooStorm,
+  faWaveSquare,
+  faCloudShowersHeavy,
+  faGlobeAmericas,
+  faTemperatureLow,
+)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 Vue.config.productionTip = false

@@ -24,6 +24,26 @@ const routes = [
     path: '/huracanes-cnh',
     name: 'Huracanes y Ondas',
     component: () => import(/* webpackChunkName: "huracanes"*/'../views/HuracanesOndas.vue')
+  },
+  {
+    path: '/oscilaciones',
+    name: 'Oscilaciones',
+    component: () => import(/* webpackChunkName: "oscilaciones"*/'../views/Oscilaciones.vue')
+  },
+  {
+    path: '/modelos-regionales',
+    name: 'Modelos Regionales',
+    component: () => import(/* webpackChunkName: "modelos-regionales"*/'../views/ModelosIMN.vue')
+  },
+  {
+    path: '/modelos-globales',
+    name: 'Modelos Globales',
+    component: () => import(/* webpackChunkName: "modelos-globales"*/'../views/ModelosGlobales.vue')
+  },
+  {
+    path: '/modelos-climaticos',
+    name: 'Modelos Climáticos',
+    component: () => import(/* webpackChunkName: "modelos-climaticos"*/'../views/ModelosClimaticos.vue')
   }
 ]
 

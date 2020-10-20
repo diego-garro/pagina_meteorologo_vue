@@ -56,9 +56,19 @@ export default {
           text: 'Oscilaciones'
         },
         {
-          to: '/modelos-imn',
+          to: '/modelos-regionales',
           icon: 'cloud-showers-heavy',
           text: 'Modelos Numéricos (IMN)'
+        },
+        {
+          to: '/modelos-globales',
+          icon: 'globe-americas',
+          text: 'Modelos Globales'
+        },
+        {
+          to: '/modelos-climaticos',
+          icon: 'temperature-low',
+          text: 'Modelos Climáticos'
         }
       ],
     }
@@ -88,7 +98,7 @@ export default {
   --fonts: 'Bebas Neue', 'cursive';
 }
 
-* {
+#app {
   box-sizing: border-box;
   letter-spacing: 0.5vmin;
   font-family: var(--fonts);
@@ -198,7 +208,7 @@ section {
   flex-wrap: wrap;
   flex-flow: column;
   justify-content: center;
-  margin: 2vmin 0 0 0;
+  margin: 2vmin 0 0 2vmin;
 }
 
 .menu {
