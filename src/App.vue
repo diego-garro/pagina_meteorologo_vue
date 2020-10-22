@@ -69,6 +69,21 @@ export default {
           to: '/modelos-climaticos',
           icon: 'temperature-low',
           text: 'Modelos Climáticos'
+        },
+        {
+          to: '/series-tiempo',
+          icon: 'chart-line',
+          text: 'Series de Tiempo'
+        },
+        {
+          to: '/reanalisys-resumen',
+          icon: 'chart-area',
+          text: 'Reanalisys y Resumen'
+        },
+        {
+          to: '/aeronautica',
+          icon: 'plane-departure',
+          text: 'Aeronáutica'
         }
       ],
     }

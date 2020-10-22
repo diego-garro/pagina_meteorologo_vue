@@ -44,6 +44,21 @@ const routes = [
     path: '/modelos-climaticos',
     name: 'Modelos Climáticos',
     component: () => import(/* webpackChunkName: "modelos-climaticos"*/'../views/ModelosClimaticos.vue')
+  },
+  {
+    path: '/series-tiempo',
+    name: 'Series de Tiempo',
+    component: () => import(/* webpackChunkName: "series-tiempo"*/'../views/SeriesTiempo.vue')
+  },
+  {
+    path: '/reanalisys-resumen',
+    name: 'Reanalisys y Resumen',
+    component: () => import(/* webpackChunkName: "reanalisys-resumne"*/'../views/ReanalisysResumen.vue')
+  },
+  {
+    path: '/aeronautica',
+    name: 'Aeronáutica',
+    component: () => import(/* webpackChunkName: "aeronautica"*/'../views/Aeronautica.vue')
   }
 ]
 

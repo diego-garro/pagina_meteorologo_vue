@@ -2,8 +2,8 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faHome, faSatellite, faDatabase, faPooStorm, faWaveSquare } from '@fortawesome/free-solid-svg-icons'
-import { faCloudShowersHeavy, faGlobeAmericas, faTemperatureLow } from '@fortawesome/free-solid-svg-icons'
+import { faHome, faSatellite, faDatabase, faPooStorm, faWaveSquare, faChartLine } from '@fortawesome/free-solid-svg-icons'
+import { faCloudShowersHeavy, faGlobeAmericas, faTemperatureLow, faChartArea, faPlaneDeparture} from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 library.add(
@@ -15,6 +15,9 @@ library.add(
   faCloudShowersHeavy,
   faGlobeAmericas,
   faTemperatureLow,
+  faChartLine,
+  faChartArea,
+  faPlaneDeparture,
 )
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
