@@ -82,7 +82,7 @@ export default {
         {
           title: 'Infrarrojo',
           img: 'imagenes/infrarrojo.gif',
-          link: 'http://satelite.imn.ac.cr/',
+          link: 'http://rammb.cira.colostate.edu/ramsdis/online/loop.asp?data_folder=rmtc/rmtcnhir48&width=640&height=480',
           big: false
         },
         {

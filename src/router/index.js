@@ -59,6 +59,36 @@ const routes = [
     path: '/aeronautica',
     name: 'Aeronáutica',
     component: () => import(/* webpackChunkName: "aeronautica"*/'../views/Aeronautica.vue')
+  },
+  {
+    path: '/marino',
+    name: 'Marino',
+    component: () => import(/* webpackChunkName: "marino"*/'../views/Marino.vue')
+  },
+  {
+    path: '/incendios-forestales',
+    name: 'Incendios Forestales',
+    component: () => import(/* webpackChunkName: "incendios-forestales"*/'../views/IncendiosForestales.vue')
+  },
+  {
+    path: '/dispersion-ceniza',
+    name: 'Dispersión de Ceniza',
+    component: () => import(/* webpackChunkName: "dispersion-ceniza"*/'../views/DispersionCeniza.vue')
+  },
+  {
+    path: '/varios',
+    name: 'Varios',
+    component: () => import(/* webpackChunkName: "varios"*/'../views/Varios.vue')
+  },
+  {
+    path: '/evaluacion',
+    name: 'Evaluación',
+    component: () => import(/* webpackChunkName: "evaluacion"*/'../views/Evaluacion.vue')
+  },
+  {
+    path: '/contacto',
+    name: 'Contacto',
+    component: () => import(/* webpackChunkName: "contacto"*/'../views/Contacto.vue')
   }
 ]
 

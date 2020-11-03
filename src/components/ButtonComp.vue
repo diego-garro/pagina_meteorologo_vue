@@ -1,6 +1,8 @@
 <template>
     <div class="button-container">
-        <a  class="button" :class="{'light': light}" :href="link" target="_blank">{{ title }}</a>
+        <a  class="button" :class="{'light': light}" :href="link" target="_blank">
+            <span v-html="title"></span>
+        </a>
     </div>
 </template>
 

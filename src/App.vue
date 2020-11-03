@@ -12,7 +12,12 @@
       </div>
       <ul class="menu">
         <li class="menu__item" v-for="(route, index) in routeProps" :key="index" @click="changeActualPage(index)">
-          <router-link class="menu__link" :to="route.to"><span class="menu__span"><font-awesome-icon class="menu__icon" :icon="route.icon" size="2x"/></span>{{ route.text }}</router-link>
+          <router-link class="menu__link" :to="route.to">
+            <span class="menu__span">
+              <font-awesome-icon class="menu__icon" :icon="route.icon" size="1x"/>
+            </span>
+            {{ route.text }}
+          </router-link>
         </li>
       </ul>
     </nav>
@@ -84,6 +89,36 @@ export default {
           to: '/aeronautica',
           icon: 'plane-departure',
           text: 'Aeronáutica'
+        },
+        {
+          to: '/marino',
+          icon: 'water',
+          text: 'Marino'
+        },
+        {
+          to: '/incendios-forestales',
+          icon: 'fire',
+          text: 'Incendios Forestales'
+        },
+        {
+          to: '/dispersion-ceniza',
+          icon: 'mountain',
+          text: 'Dispersión de Ceniza'
+        },
+        {
+          to: '/varios',
+          icon: 'recycle',
+          text: 'Varios'
+        },
+        {
+          to: '/evaluacion',
+          icon: 'clipboard',
+          text: 'Evaluación'
+        },
+        {
+          to: '/contacto',
+          icon: 'envelope',
+          text: 'Contacto'
         }
       ],
     }
@@ -114,6 +149,8 @@ export default {
 }
 
 #app {
+  background: var(--color-cream);
+  color: var(--color-dark-blue);
   box-sizing: border-box;
   letter-spacing: 0.5vmin;
   font-family: var(--fonts);
@@ -123,6 +160,7 @@ body {
   margin: 0;
   line-height: 2vmin;
   color: var(--color-dark-blue);
+  background: var(--color-cream);
 }
 
 .index-header {
@@ -176,13 +214,13 @@ hr {
 
 .nav,
 .content {
-  background: var(--color-cream);
-  color: var(--color-dark-blue);
   display: inline-block;
   position: absolute;
+  height: 100%;
   top: 0;
   bottom: 0;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .nav {
@@ -192,8 +230,8 @@ hr {
 }
 
 .principal-header__title {
-  font-size: 6vmin;
-  line-height: 6vmin;
+  font-size: 5vmin;
+  line-height: 5vmin;
   text-align: center;
 }
 
@@ -204,14 +242,14 @@ hr {
 
 .content-title {
   text-align: center;
-  font-size: 6vmin;
+  font-size: 4vmin;
   line-height: 6vmin;
   padding: 0 1.5vmin 0 1.5vmin;
 }
 
 .content-note {
   text-align: center;
-  font-size: 3.5vmin;
+  font-size: 3vmin;
   line-height: 3.5vmin;
   padding: 0 1.5vmin 0 1.5vmin;
 }
@@ -227,19 +265,19 @@ section {
 }
 
 .menu {
-  padding: 0 0 0 1vmin;
+  padding: 0 0 0 0.8vmin;
   top: 0;
   list-style: none;
 }
 
 .menu__item {
   align-items: center;
-  padding: 1vmin 0 1vmin 0;
+  padding: 0.8vmin 0 0.8vmin;
   margin: 0 2vmin 0;
 }
 
 .menu__span {
-  width: 15vmin;
+  width: 10vmin;
   text-align: center;
   font-size: 3vmin;
 }
@@ -247,16 +285,16 @@ section {
 .menu__link {
   color: var(--color-cream);
   display: flex;
-  justify-content: start;
   align-items: center;
   text-align: start;
-  font-size: 4vmin;
+  font-size: 3vmin;
   line-height: 4vmin;
+  letter-spacing: 0.2vmin;
   background: var(--color-dark-blue);
   border-radius: 1vmin;
   font-weight: bold;
   text-decoration: none;
-  padding: 1vmin 0 1vmin 0;
+  padding: 2vmin 0 1vmin 0;
 }
 
 .menu__link:hover {
@@ -278,6 +316,10 @@ section {
     width: 30%;
     background: var(--color-cream);
   }
+
+  .menu__link {
+    font-size: 4vmin;
+  }
 }
 
 @media (max-width: 786px) {
@@ -296,17 +338,17 @@ section {
     position: relative;
     width: 100%;
     height: auto;
+    z-index: 1;
   }
 
   .nav {
-    position: absolute;
-    width: 75%;
-    height: 100%;
+    width: 55%;
+    height: 85%;
     top: 13vmin;
     margin-left: -100%;
     transition: all 0.35s;
-    z-index: 25;
-    overflow-y: hidden;
+    z-index: 99;
+    overflow-y: auto;
     background: var(--color-cream);
     border-radius: 2vmin;
     border: 2px solid var(--color-dark-blue);
@@ -322,14 +364,15 @@ section {
   }
 
   .menu__item {
-    padding: 0 0.5vmin 0.2vmin 0;
+    margin: 0.5vmin 1vmin 0;
+    padding: 0.2vmin 0.5vmin 0.2vmin 0;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
   }
 
   .menu__link {
-    margin: 0.8vmin 0.5vmin 0 0;
-    font-size: 4vmin;
-    line-height: 1vmin;
-    padding: 1vmin 0 1vmin 0;
     border-radius: 1vmin;
     letter-spacing: 0;
   }
@@ -337,7 +380,7 @@ section {
   .show {
     margin-left: 0;
     position: fixed;
-    overflow-y: hidden;
+    overflow-y: auto;
     height: 65vh;
   }
 }

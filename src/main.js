@@ -4,6 +4,7 @@ import router from './router'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faHome, faSatellite, faDatabase, faPooStorm, faWaveSquare, faChartLine } from '@fortawesome/free-solid-svg-icons'
 import { faCloudShowersHeavy, faGlobeAmericas, faTemperatureLow, faChartArea, faPlaneDeparture} from '@fortawesome/free-solid-svg-icons'
+import { faWater, faFire, faMountain, faRecycle, faClipboard, faEnvelope, faScroll } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 library.add(
@@ -18,6 +19,13 @@ library.add(
   faChartLine,
   faChartArea,
   faPlaneDeparture,
+  faWater,
+  faFire,
+  faMountain,
+  faRecycle,
+  faClipboard,
+  faEnvelope,
+  faScroll
 )
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 

@@ -42,7 +42,7 @@ export default {
 
 <style scoped>
 .container {
-    width: 40vmin;
+    width: 35vmin;
     height: 30vmin;
     border-radius: 0.5vmin;
     box-shadow: 0 0.2vmin 0.2vmin var(--color-dark-blue);
@@ -58,8 +58,8 @@ export default {
 }
 
 .container.big-card {
-    width: 50vmin;
-    height: 40vmin;
+    width: 45vmin;
+    height: 35vmin;
 }
 
 .card-img {
@@ -72,13 +72,13 @@ export default {
 
 .card-title {
     padding: 0 1vmin;
-    font-size: 2.5vmin;
+    font-size: 2.2vmin;
 }
 
 @media (max-width: 768px) {
     .card-img {
-        width: 75%;
-        height: 75%;
+        width: 80%;
+        height: 80%;
     }
 }
 </style>

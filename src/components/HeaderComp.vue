@@ -30,7 +30,7 @@ export default {
 <style scoped>
 .header {
   text-align: center;
-  font-size: 5vmin;
+  font-size: 4vmin;
   line-height: 9vmin;
 }
 
@@ -45,8 +45,8 @@ export default {
 }
 
 .header__img {
-  width: 50vmin;
-  height: 50vmin;
+  width: 35vmin;
+  height: 35vmin;
 }
 
 @media (max-width: 768px) {
