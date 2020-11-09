@@ -25,7 +25,13 @@
     </section>
     <br><hr>
     <section>
-      <CardContainer :cards="cards.slice(9)"/>
+      <h1 class="content-title">Agua precipitable advectada</h1>
+      <br>
+      <CardContainer :cards="cards.slice(12)"/>
+    </section>
+    <br><hr>
+    <section>
+      <CardContainer :cards="cards.slice(9, 12)"/>
     </section>
   </div>
 </template>
@@ -103,7 +109,7 @@ export default {
           link: 'https://weather.cod.edu/satrad/?parms=global-atlantic-08-6-0-100-1&checked=map&colorbar=undefined',
           big: false
         },
-        // Tercer bloque 9 - final
+        // Tercer bloque 9 - 11
         {
           title: 'RAMSDIS',
           img: 'imagenes/ramsdis.png',
@@ -117,15 +123,28 @@ export default {
           big: false
         },
         {
+          title: 'Rayos CIGEFI',
+          img: 'imagenes/rayos-cigefi.jpg',
+          link: 'http://www.cigefi.ucr.ac.cr/iddcc-ucr/',
+          big: false
+        },
+        // Cuarto bloque 12 - final
+        {
           title: 'CIMSS Tropical Cyclones',
           img: 'imagenes/cimms.png',
           link: 'http://tropic.ssec.wisc.edu/',
           big: false
         },
-        {
-          title: 'Rayos CIGEFI',
-          img: 'imagenes/rayos-cigefi.jpg',
-          link: 'http://www.cigefi.ucr.ac.cr/iddcc-ucr/',
+                {
+          title: 'Agua Precipitacle Sur América',
+          img: 'imagenes/agua_precip_cira_SAm.png',
+          link: 'http://cat.cira.colostate.edu/sport/layered/advected/LPW_SAm.htm',
+          big: false
+        },
+                {
+          title: 'Agua Precipitacle Norte América',
+          img: 'imagenes/agua_precip_cira_NAm.png',
+          link: 'http://cat.cira.colostate.edu/sport/layered/advected/LPW_alt.htm',
           big: false
         },
       ],

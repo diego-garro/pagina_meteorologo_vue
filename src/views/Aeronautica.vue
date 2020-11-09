@@ -96,6 +96,12 @@ export default {
                     link: "https://www.tropicaltidbits.com/analysis/sfcplots/",
                     big: false,
                 },
+                {
+                    title: "Turbulencia CIMSS GOES16",
+                    img: "imagenes/turbulencia-goes16-CA.png",
+                    link: "https://cimss.ssec.wisc.edu/turbulence/?satellite=goes-e&hem=NH&region=Central-America&datetime=LATEST",
+                    big: false,
+                },
                 
             ],
             buttons: [
