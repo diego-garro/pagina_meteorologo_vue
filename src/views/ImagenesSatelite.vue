@@ -136,13 +136,13 @@ export default {
           big: false
         },
                 {
-          title: 'Agua Precipitacle Sur América',
+          title: 'Agua Precipitable Sur América',
           img: 'imagenes/agua_precip_cira_SAm.png',
           link: 'http://cat.cira.colostate.edu/sport/layered/advected/LPW_SAm.htm',
           big: false
         },
                 {
-          title: 'Agua Precipitacle Norte América',
+          title: 'Agua Precipitable Norte América',
           img: 'imagenes/agua_precip_cira_NAm.png',
           link: 'http://cat.cira.colostate.edu/sport/layered/advected/LPW_alt.htm',
           big: false

@@ -20,13 +20,13 @@
     <section>
         <h1 class="content-title">Compendio de estaciones</h1>
         <br>
-        <ButtonContainer :buttons="buttons.slice(5, 16)"/>
+        <ButtonContainer :buttons="buttons.slice(5, 17)"/>
     </section>
     <br><hr>
     <section>
         <h1 class="content-title">Hidroestimadores</h1>
         <br>
-        <ButtonContainer :buttons="buttons.slice(16)"/>
+        <ButtonContainer :buttons="buttons.slice(17)"/>
     </section>
     <br>
   </div>
@@ -156,7 +156,11 @@ export default {
           title: 'Datos IMN (horarios, diarios, mensuales)',
           link: 'http://intranet.imn.ac.cr/datos.html'
         },
-        // Segundo bloque 5 - 15
+        // Segundo bloque 5 - 16
+        {
+          title: 'Estación Río Zapote',
+          link: 'https://www.imn.ac.cr/especial/estacionCanalete.html'
+        },
         {
           title: 'Datos observados (Davis, UCR, IMN)',
           link: 'http://intranet.imn.ac.cr/datos.html'
@@ -201,7 +205,7 @@ export default {
           title: 'ICAFE-estaciones',
           link: 'http://www.icafe.cr/sector-cafetalero/clima/'
         },
-        // Tercer bloque 16 - final
+        // Tercer bloque 17 - final
         {
           title: 'Hidroestimador de Naval EEUU',
           link: 'https://www.nrlmry.navy.mil/archdat/atlantic/central_america/accumulations/geo/'

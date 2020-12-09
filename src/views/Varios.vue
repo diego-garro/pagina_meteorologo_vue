@@ -7,6 +7,12 @@
         <section>
             <ButtonContainer :buttons="buttons"/>
         </section>
+        <br><hr>
+        <section>
+            <h1 class="content-title">Cámaras IMN Azotea</h1>
+            <br>
+            <ButtonContainer :buttons="camarasAzotea"/>
+        </section>
     </div>
 </template>
 
@@ -39,7 +45,16 @@ export default {
                     title: 'SATCAWEB.org',
                     link: 'http://www.satcaweb.org/'
                 },
-                
+            ],
+            camarasAzotea: [
+                {
+                    title: 'Cámara Oeste',
+                    link: 'http://192.168.0.240'
+                },
+                {
+                    title: 'Cámara Este',
+                    link: 'http://192.168.0.239'
+                },
             ]
         }
     }
