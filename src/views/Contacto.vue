@@ -3,14 +3,14 @@
         <section>
             <HeaderComp title="Contacto"/>
             <h1 class="content-title">Sitio Web y Redes Sociales del IMN</h1>
-            <ButtonContainer :buttons="buttons.slice(3)"/>
+            <ButtonContainer :buttons="socialIMNButtons"/>
         </section>
         <br><hr>
         <section>
             <h2 class="content-note">Para cualquier sugerencia o problema con este sitio web, favor contactar por correo o redes sociales con:</h2>
             <h3>Diego Garro</h3>
             <h3 class="email">dgarro@imn.ac.cr</h3>
-            <ButtonContainer :buttons="buttons.slice(0, 3)"/>
+            <ButtonContainer :buttons="socialButtons"/>
         </section>
         <br><br>
     </div>
@@ -20,6 +20,9 @@
 import HeaderComp from '@/components/HeaderComp.vue'
 import ButtonContainer from '@/components/ButtonContainer.vue'
 
+import jsonSocialButtons from "@/assets/json/contacto/socialButtons.json"
+import jsonSocialIMNButtons from "@/assets/json/contacto/socialIMNButtons.json"
+
 export default {
     name: 'Contacto',
     components: {
@@ -28,32 +31,8 @@ export default {
     },
     data() {
         return {
-            buttons: [
-                {
-                    title: `Facebook`,
-                    link: 'https://www.facebook.com/dgarromolina'
-                },
-                {
-                    title: 'Twitter',
-                    link: 'https://twitter.com/dgarromolina'
-                },
-                {
-                    title: 'LinkedIn',
-                    link: 'https://www.linkedin.com/in/diego-garro-molina-b5a91960/'
-                },
-                {
-                    title: 'Sitio Web Oficial',
-                    link: 'https://www.imn.ac.cr/'
-                },
-                {
-                    title: 'Facebook',
-                    link: 'https://www.facebook.com/IMNCostaRica/'
-                },
-                {
-                    title: 'Twitter',
-                    link: 'https://twitter.com/IMNCR'
-                }
-            ]
+            socialButtons: jsonSocialButtons,
+            socialIMNButtons: jsonSocialIMNButtons,
         }
     }
 }

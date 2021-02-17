@@ -3,13 +3,13 @@
         <section>
             <HeaderComp title="Meteorología Aeronática"/>
             <br>
-            <ButtonContainer :buttons="buttons.slice(0, 5)"/>
+            <ButtonContainer :buttons="headerButtons"/>
         </section>
         <br><hr>
         <section>
             <h1 class="content-title">Archivos para el BUFKIT</h1>
             <br>
-            <ButtonContainer :buttons="buttons.slice(5, 9)"/>
+            <ButtonContainer :buttons="bufkitButtons"/>
         </section>
         <br><hr>
         <section>
@@ -37,6 +37,11 @@ import CardContainer from "@/components/CardContainer.vue"
 import ButtonContainer from "@/components/ButtonContainer.vue"
 import moment from 'moment'
 
+import jsonCards from "@/assets/json/aeronautica/cards.json"
+import jsonHeaderButtons from "@/assets/json/aeronautica/headerButtons.json"
+import jsonBufkitButtons from "@/assets/json/aeronautica/bufkitButtons.json"
+import jsonSigWXButtons from "@/assets/json/aeronautica/sigWXButtons.json"
+
 export default {
     name: 'SeriesTiempo',
     components: {
@@ -46,121 +51,12 @@ export default {
     },
     data() {
         return {
-            cards: [
-                // Primer bloque 0 - final
-                {
-                    title: "Análisis de superficie América",
-                    img: "imagenes/sigwx.png",
-                    link: "https://www.nhc.noaa.gov/tafb_latest/USA_latest.gif",
-                    big: false,
-                },
-                {
-                    title: "Volcanic Ash Advisory Center",
-                    img: "imagenes/volcanic.png",
-                    link: "https://www.ssd.noaa.gov/VAAC/washington.html",
-                    big: false,
-                },
-                {
-                    title: "Mapas Tiempo Significante Niveles Altos",
-                    img: "imagenes/high-level-charts.png",
-                    link: "https://www.aviationweather.gov/progchart?gis=off",
-                    big: false,
-                },
-                {
-                    title: "Mapas Tiempo Significante por Regiones",
-                    img: "imagenes/high-level-charts-regiones.png",
-                    link: "https://www.aviationweather.gov/flightfolder/products?type=sigwx",
-                    big: false,
-                },
-                {
-                    title: "Pronóstico de Turbulencia",
-                    img: "imagenes/turbulencia.png",
-                    link: "https://www.aviationweather.gov/wafs",
-                    big: false,
-                },
-                {
-                    title: "Carpetas Aeronáuticas",
-                    img: "imagenes/carpetas-aeronauticas.png",
-                    link: "https://www.aviationweather.gov/flightfolder",
-                    big: false,
-                },
-                {
-                    title: "Informe Aeronáutico",
-                    img: "imagenes/informe-aero.png",
-                    link: "https://www.imn.ac.cr/informe-de-meteorologia-aeronautica",
-                    big: false,
-                },
-                {
-                    title: "Mapa de METAR's",
-                    img: "imagenes/mapa-metares.png",
-                    link: "https://www.tropicaltidbits.com/analysis/sfcplots/",
-                    big: false,
-                },
-                {
-                    title: "Turbulencia CIMSS GOES16",
-                    img: "imagenes/turbulencia-goes16-CA.png",
-                    link: "https://cimss.ssec.wisc.edu/turbulence/?satellite=goes-e&hem=NH&region=Central-America&datetime=LATEST",
-                    big: false,
-                },
-                
-            ],
-            buttons: [
-                {
-                    title: 'Sondeos MROC (Wyoming)',
-                    link: 'http://weather.uwyo.edu/upperair/sounding.html',
-                },
-                {
-                    title: 'OGIMET',
-                    link: 'https://www.ogimet.com/',
-                },
-                {
-                    title: "METAR's 12 horas",
-                    link: 'https://www.aviationweather.gov/metar/data?ids=MROC%20MRPV%20MRLM%20MRLB&format=raw&hours=18&taf=off&layout=on',
-                },
-                {
-                    title: "TAF's Actuales",
-                    link: 'https://www.aviationweather.gov/taf/data?ids=MROC+MRLB+MRLM+MRPV&format=raw&date=&submit=Get+TAF+data',
-                },
-                {
-                    title: "METAR's y TAF's 24 horas",
-                    link: 'https://www.aviationweather.gov/metar/data?ids=MROC+MRPV+MRLM+MRLB&format=raw&date=&hours=24&taf=on',
-                },
-                {
-                    title: 'MROC',
-                    link: 'ftp://ftp.meteo.psu.edu/pub/bufkit/nam_mroc.buf',
-                },
-                {
-                    title: 'MRLB',
-                    link: 'ftp://ftp.meteo.psu.edu/pub/bufkit/nam_mrlb.buf',
-                },
-                {
-                    title: 'MRPV',
-                    link: 'ftp://ftp.meteo.psu.edu/pub/bufkit/nam_mrpv.buf',
-                },
-                {
-                    title: 'MRLM',
-                    link: 'ftp://ftp.meteo.psu.edu/pub/bufkit/nam_mrlm.buf',
-                },
-            ],
-            sigWXButtons: [
-                {
-                    title: '0000Z',
-                    link: '#'
-                },
-                {
-                    title: '0600Z',
-                    link: '#'
-                },
-                {
-                    title: '1200Z',
-                    link: '#'
-                },
-                {
-                    title: '1800Z',
-                    link: '#'
-                }
-                
-            ],
+            // Cards
+            cards: jsonCards,
+            // Buttons
+            headerButtons: jsonHeaderButtons,
+            bufkitButtons: jsonBufkitButtons,
+            sigWXButtons: jsonSigWXButtons,
             today: moment(),
             yesterday: moment().subtract(1, 'days'),
             hours: ['00', '06', '12', '18'],
