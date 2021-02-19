@@ -21,7 +21,7 @@
         </li>
       </ul>
     </nav>
-    <main id="content" class="content">
+    <main id="content" class="content" @click="showClass = ''">
       <transition name="fade">
         <router-view/>
       </transition>
