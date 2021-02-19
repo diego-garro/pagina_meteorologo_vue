@@ -5,13 +5,13 @@
         </section>
         <br><hr>
         <section>
-            <ButtonContainer :buttons="buttons"/>
+            <ButtonContainer :buttons="camarasVialesButtons"/>
         </section>
         <br><hr>
         <section>
             <h1 class="content-title">Cámaras IMN Azotea</h1>
             <br>
-            <ButtonContainer :buttons="camarasAzotea"/>
+            <ButtonContainer :buttons="camarasImnButtons"/>
         </section>
     </div>
 </template>
@@ -19,6 +19,9 @@
 <script>
 import HeaderComp from '@/components/HeaderComp.vue'
 import ButtonContainer from '@/components/ButtonContainer.vue'
+
+import jsonCamarasVialesButtons from "@/assets/json/varios/camarasVialesButtons.json"
+import jsonCamarasImnButtons from "@/assets/json/varios/camarasImnButtons.json"
 
 export default {
     name: 'Varios',
@@ -28,34 +31,8 @@ export default {
     },
     data() {
         return {
-            buttons: [
-                {
-                    title: 'Cámaras Viales Nacionales',
-                    link: 'https://www.camarasvialescr.com/'
-                },
-                {
-                    title: 'Northern Vermont University',
-                    link: 'http://atmos.northernvermont.edu/'
-                },
-                {
-                    title: 'Estadísticas Huracanes',
-                    link: 'https://www.aoml.noaa.gov/hrd/tcfaq/tcfaqE_esp.html'
-                },
-                {
-                    title: 'SATCAWEB.org',
-                    link: 'http://www.satcaweb.org/'
-                },
-            ],
-            camarasAzotea: [
-                {
-                    title: 'Cámara Oeste',
-                    link: 'http://192.168.0.240'
-                },
-                {
-                    title: 'Cámara Este',
-                    link: 'http://192.168.0.239'
-                },
-            ]
+            camarasVialesButtons: jsonCamarasVialesButtons,
+            camarasImnButtons: jsonCamarasImnButtons,
         }
     }
 }

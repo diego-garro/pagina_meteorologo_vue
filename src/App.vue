@@ -22,7 +22,9 @@
       </ul>
     </nav>
     <main id="content" class="content">
-      <router-view/>
+      <transition name="fade">
+        <router-view/>
+      </transition>
     </main>
   </div>
 </template>
@@ -154,6 +156,13 @@ export default {
   box-sizing: border-box;
   letter-spacing: 0.5vmin;
   font-family: var(--fonts);
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
 }
 
 body {
