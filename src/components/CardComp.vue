@@ -12,7 +12,8 @@ export default {
     name: 'Card',
     data() {
         return {
-            isBigCard: false
+            isBigCard: false,
+            imgFormat: 'jpg'
         }
     },
     props: {
@@ -34,8 +35,15 @@ export default {
         }
     },
     methods: {
-        getImgURL: (url) => require(`../assets/img/${url}`),
-
+        getImgURL: function (url) {
+            if (url.endsWith('.gif')) {
+                return require(`../assets/img/${url}`)
+            }
+            if (this.imgFormat === 'jpg') {
+                return require(`../assets/img/${url}.jpg`)
+            } 
+            return require(`../assets/img/${url}.webp`)
+        },
     }
 }
 </script>

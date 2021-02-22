@@ -1,19 +1,19 @@
 [
     {
         "title": "24 Horas",
-        "img": "imagenes/cnh-fcst-24h.webp",
+        "img": "imagenes/cnh-fcst-24h",
         "link": "https://www.nhc.noaa.gov/tafb_latest/atlsfc24_latestBW.gif",
         "big": false
     },
     {
         "title": "48 Horas",
-        "img": "imagenes/cnh-fcst-48h.webp",
+        "img": "imagenes/cnh-fcst-48h",
         "link": "https://www.nhc.noaa.gov/tafb_latest/atlsfc48_latestBW.gif",
         "big": false
     },
     {
         "title": "72 Horas",
-        "img": "imagenes/cnh-fcst-72h.webp",
+        "img": "imagenes/cnh-fcst-72h",
         "link": "https://www.nhc.noaa.gov/tafb_latest/atlsfc72_latestBW.gif",
         "big": false
     }

@@ -38,11 +38,11 @@ import HeaderComp from "@/components/HeaderComp.vue"
 import CardContainer from "@/components/CardContainer.vue"
 import ButtonContainer from '@/components/ButtonContainer.vue'
 
-import jsonimnEstacionesCards from "@/assets/json/datos_seguimiento/imnEstaciones.json"
-import jsonOtrosDatosCards from "@/assets/json/datos_seguimiento/otrosDatos.json"
-import jsonEstacionesVariasButtons from "@/assets/json/datos_seguimiento/otrosDatos.json"
-import jsonCompendioEstacionesButtons from "@/assets/json/datos_seguimiento/compendioEstaciones.json"
-import jsonHidroestimadoresButtons from "@/assets/json/datos_seguimiento/hidroestimadores.json"
+import jsonimnEstacionesCards from "@/assets/json/datos_seguimiento/imnEstacionesCards.json"
+import jsonOtrosDatosCards from "@/assets/json/datos_seguimiento/otrosDatosCards.json"
+import jsonEstacionesVariasButtons from "@/assets/json/datos_seguimiento/estacionesVariasButtons.json"
+import jsonCompendioEstacionesButtons from "@/assets/json/datos_seguimiento/compendioEstacionesButtons.json"
+import jsonHidroestimadoresButtons from "@/assets/json/datos_seguimiento/hidroestimadoresButtons.json"
 
 export default {
   name: "DatosSeguimiento",

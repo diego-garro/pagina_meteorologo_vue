@@ -8,7 +8,7 @@
             <ButtonComp
                 title="Evaluaciones varias"
                 link="http://intranet.imn.ac.cr/estaciones/graficos/"
-                light="true"
+                :light="true"
             />
         </section>
     </div>
