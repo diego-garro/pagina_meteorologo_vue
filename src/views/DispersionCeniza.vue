@@ -1,16 +1,16 @@
 <template>
-    <div class="dispersion-ceniza">
-        <section>
-            <HeaderComp title="Modelos Lagrangianos de Dispersión de Ceniza"/>
-            <br>
-            <ButtonContainer :buttons="camarasButtons"/>
-        </section>
-        <br><hr>
-        <section>
-            <CardContainer :cards="dispersionCards"/>
-        </section>
-        <br>
-    </div>
+  <div class="dispersion-ceniza">
+    <section>
+      <HeaderComp title="Modelos Lagrangianos de Dispersión de Ceniza"/>
+      <br>
+      <ButtonContainer :buttons="camarasButtons"/>
+    </section>
+    <br><hr>
+    <section>
+      <CardContainer :cards="dispersionCards"/>
+    </section>
+    <br>
+  </div>
 </template>
 
 <script>
@@ -22,25 +22,25 @@ import jsonCamarasButtons from "@/assets/json/dispersion_ceniza/camarasButtons.j
 import jsonDispersionCards from "@/assets/json/dispersion_ceniza/dispersionCards.json"
 
 export default {
-    name: 'SeriesTiempo',
-    components: {
-        HeaderComp,
-        CardContainer,
-        ButtonContainer,
-    },
-    data() {
-        return {
-            dispersionCards: jsonDispersionCards,
-            camarasButtons: jsonCamarasButtons,
-        }
+  name: 'SeriesTiempo',
+  components: {
+    HeaderComp,
+    CardContainer,
+    ButtonContainer,
+  },
+  data() {
+    return {
+      dispersionCards: jsonDispersionCards,
+      camarasButtons: jsonCamarasButtons,
     }
+  }
 }
 </script>
 
 <style>
 @media (max-width: 768px) {
   .dispersion-ceniza {
-    margin-top: 13vmin;
+  margin-top: 13vmin;
   }
 }
 </style>
